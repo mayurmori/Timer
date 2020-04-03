@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lYv-0G-FXu">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="JtO-GF-pgH">
+            <objects>
+                <viewController id="lYv-0G-FXu" customClass="ViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Xz-5X-tXS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNe-Ac-mn2">
+                                <rect key="frame" x="202" y="35" width="10.333333333333343" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CYg-b7-yYX">
+                                <rect key="frame" x="15" y="125.33333333333331" width="384" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-eQ-00r">
+                                        <rect key="frame" x="0.0" y="0.0" width="184.66666666666666" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="btnStart_Clicked:" destination="lYv-0G-FXu" eventType="touchUpInside" id="93y-7I-jNu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMl-Ho-jcx">
+                                        <rect key="frame" x="199.66666666666663" y="0.0" width="184.33333333333337" height="30"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="btnStop_Clicked:" destination="lYv-0G-FXu" eventType="touchUpInside" id="vQz-zl-VMu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zMl-Ho-jcx" firstAttribute="height" secondItem="nAV-eQ-00r" secondAttribute="height" id="APk-pc-W1U"/>
+                                    <constraint firstItem="zMl-Ho-jcx" firstAttribute="width" secondItem="nAV-eQ-00r" secondAttribute="width" id="LCF-vf-SnN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CYg-b7-yYX" firstAttribute="leading" secondItem="fEK-rz-g4l" secondAttribute="leading" constant="15" id="0QK-cM-DcE"/>
+                            <constraint firstItem="CYg-b7-yYX" firstAttribute="top" secondItem="hNe-Ac-mn2" secondAttribute="bottom" constant="70" id="1hc-Yu-zpg"/>
+                            <constraint firstItem="fEK-rz-g4l" firstAttribute="trailing" secondItem="CYg-b7-yYX" secondAttribute="trailing" constant="15" id="3Of-6U-BCb"/>
+                            <constraint firstItem="hNe-Ac-mn2" firstAttribute="top" secondItem="fEK-rz-g4l" secondAttribute="top" constant="15" id="Snv-Nl-hLK"/>
+                            <constraint firstItem="hNe-Ac-mn2" firstAttribute="centerX" secondItem="2Xz-5X-tXS" secondAttribute="centerX" id="VnI-Os-4Kw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fEK-rz-g4l"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblCounter" destination="hNe-Ac-mn2" id="vhf-Oz-mUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4d-Le-vGu" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
